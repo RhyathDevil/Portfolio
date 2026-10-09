@@ -1,0 +1,4 @@
+# Netlify configuration
+# Only the public/ folder is published as the website.
+[build]
+  publish = "public"

@@ -3,3 +3,26 @@
 Thumbs.db
 *.log
 .env
+
+# IDEs and editors
+.vscode/
+*.swp
+*~
+
+# OS files
+desktop.ini
+
+# Netlify CLI local state
+.netlify/
+
+# Dependencies (if tooling is added later)
+node_modules/
+
+# Logs and caches
+logs/
+.cache/
+
+# Secrets
+.env.*
+*.key
+*.pem
