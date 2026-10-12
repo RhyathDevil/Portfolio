@@ -36,7 +36,13 @@ Start a local server with `public/` as the root:
 python -m http.server 8000 --directory public
 ```
 
-Then open http://localhost:8000. Paths are root-relative (`/assets/...`), so opening the files directly via `file://` will not work.
+Then open http://localhost:8000. Paths are root-relative (`/assets/...`), so the site must be served from the domain root. These will not work:
+
+- opening the files directly via `file://`
+- WebStorm's built-in preview (`localhost:63342/Portfolio/...`)
+- any server that serves the project from a subfolder
+
+The custom 404 page and the rules in `public/_redirects` only work on Netlify.
 
 Every push to `main` is deployed automatically by Netlify.
 

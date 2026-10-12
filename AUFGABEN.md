@@ -69,7 +69,7 @@ Diese Vorgaben sind ein Vorschlag. Du darfst sie ändern, solange die Kontrastwe
 | Rahmen / Fokus   | Akzent    | Akzent    | 3 : 1                           |
 
 - [x] Kontrastwerte aller Farbpaare in beiden Modi geprüft und dokumentiert
-- [x] Information wird nie *nur* über Farbe vermittelt (z. B. Links auch unterstrichen)
+- [ ] Information wird nie *nur* über Farbe vermittelt (z. B. Links auch unterstrichen)
 
 ---
 
@@ -79,14 +79,14 @@ Diese Vorgaben sind ein Vorschlag. Du darfst sie ändern, solange die Kontrastwe
 
 **Ziel:** Du kannst deine Seite im Browser so ansehen, wie sie später online aussieht.
 
-- [ ] **Lokalen Server starten**, und zwar mit dem Ordner `public/` als Wurzel, und die Seite unter `http://localhost:8000` öffnen.
+- [x] **Lokalen Server starten**, und zwar mit dem Ordner `public/` als Wurzel, und die Seite unter `http://localhost:8000` öffnen.
   Alle Dateipfade in dieser Liste beziehen sich auf `public/`. Online ist `public/` das Wurzelverzeichnis deiner Domain.
   Öffne die Dateien nicht per Doppelklick (`file://…`). Sonst funktionieren wurzel-relative Pfade (`/assets/…`) und später auch JavaScript-Module nicht.
-- [ ] **Entwicklerwerkzeuge des Browsers kennenlernen** (F12): die Reiter *Elemente/Inspektor*, *Konsole* und *Netzwerk*.
+- [x] **Entwicklerwerkzeuge des Browsers kennenlernen** (F12): die Reiter *Elemente/Inspektor*, *Konsole* und *Netzwerk*.
   Mit diesen Werkzeugen findest du die meisten Fehler selbst.
-- [ ] **Barrierefreiheits-Inspektor finden.** In Firefox heißt der Reiter „Barrierefreiheit“, in Chrome liegt er unter „Elemente → Barrierefreiheit“.
+- [x] **Barrierefreiheits-Inspektor finden.** In Firefox heißt der Reiter „Barrierefreiheit“, in Chrome liegt er unter „Elemente → Barrierefreiheit“.
   Dort siehst du, wie ein Screenreader deine Seite „sieht“.
-- [ ] **HTML-Validator als Lesezeichen** speichern: validator.w3.org/nu
+- [x] **HTML-Validator als Lesezeichen** speichern: validator.w3.org/nu
 
 **Pfad-Regel für das ganze Projekt:** Alle Verweise auf eigene Dateien beginnen mit `/`, also wurzel-relativ. Das gilt für CSS, JS, Bilder und Links zu anderen Seiten.
 
