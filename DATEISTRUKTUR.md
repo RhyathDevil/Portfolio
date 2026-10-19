@@ -83,6 +83,7 @@ Portfolio/
 │
 ├── netlify.toml                  # Netlify-Einstellungen (veröffentlicht nur public/)
 ├── .gitignore
+├── CLAUDE.md                     # Regeln für Claude Code in diesem Projekt (Lernmodus)
 ├── README.md
 ├── DATEISTRUKTUR.md              # Diese Datei
 └── AUFGABEN.md                   # Aufgabenliste
