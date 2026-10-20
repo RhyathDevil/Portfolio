@@ -6,7 +6,7 @@ Personal portfolio website that presents my projects and explains them interacti
 
 ## Features (planned)
 
-- Project pages written as case studies, each with an interactive demo
+- Project pages written as case studies (web, Python and other projects), with a development log and an accessible demo where it fits
 - English and German versions with a language switcher
 - Accessibility target: WCAG 2.2 AA, with an AAA colour contrast palette
 - Light and dark mode that follows the system setting and can be switched manually

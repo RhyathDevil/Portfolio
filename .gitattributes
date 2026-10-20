@@ -1,0 +1,13 @@
+# Git line endings
+# Text files are stored and checked out with LF, regardless of the editor.
+* text=auto eol=lf
+
+# Binary files are never changed
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.avif  binary
+*.ico   binary
+*.pdf   binary
+*.woff2 binary

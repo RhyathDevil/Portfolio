@@ -114,19 +114,20 @@ Diese Vorgaben sind ein Vorschlag. Du darfst sie ändern, solange die Kontrastwe
 
 #### A) Dokument und `<head>`
 
-- [ ] **Doctype** als allererste Zeile.
+- [x] **Doctype** als allererste Zeile.
   Er sagt dem Browser, dass er die Seite nach modernem Standard darstellen soll.
-- [ ] **Sprachattribut** am `<html>`-Element (Englisch).
+- [x] **Sprachattribut** am `<html>`-Element (Englisch).
   Screenreader wählen danach die Aussprache. Mit falscher Sprache wird die Seite unverständlich vorgelesen.
-- [ ] **Zeichenkodierung** als erstes Element im `<head>`.
+- [x] **Zeichenkodierung** als erstes Element im `<head>`.
   Ohne sie werden Umlaute und Sonderzeichen falsch dargestellt.
-- [ ] **Viewport-Angabe.**
+- [x] **Viewport-Angabe.**
   Ohne sie zeigen Smartphones die Seite verkleinert wie auf einem Desktop an. **Zoomen darf nicht gesperrt werden.** Menschen mit Sehbeeinträchtigung sind darauf angewiesen.
-- [ ] **Seitentitel** nach dem Muster „Seitenname – Dein Name“.
+- [x] **Seitentitel** nach dem Muster „Seitenname – Dein Name“.
   Der Titel ist das Erste, was ein Screenreader vorliest, und er steht im Browser-Tab. Deshalb muss er auf jeder Seite eindeutig sein, und der Seitenname steht vorne.
-- [ ] **Meta-Description** mit ein bis zwei Sätzen.
+  Ausnahme Startseite: Dort ist dein Name selbst der Seitenname, also „Dein Name – Deine Rolle“. Auf allen anderen Seiten gilt das Muster oben.
+- [x] **Meta-Description** mit ein bis zwei Sätzen.
   Suchmaschinen zeigen diesen Text in den Suchergebnissen an.
-- [ ] **CSS-Dateien einbinden**, in dieser Reihenfolge: reset → tokens → base → layout → components → pages → demos.
+- [x] **CSS-Dateien einbinden**, in dieser Reihenfolge: reset → tokens → base → layout → components → pages → demos.
   Die Reihenfolge ist wichtig, weil spätere Dateien Regeln aus früheren überschreiben.
 - [ ] **Druck-CSS einbinden** und dabei festlegen, dass sie nur beim Drucken gilt.
 - [ ] **JavaScript einbinden** (`main.js`), ohne dass das Laden der Seite blockiert wird.
@@ -207,8 +208,8 @@ Diese Vorgaben sind ein Vorschlag. Du darfst sie ändern, solange die Kontrastwe
 
 - [ ] **Hero / Intro**
   - [ ] h1 mit deinem Namen
-  - [ ] deine Rolle in einer Zeile (z. B. „Junior Web Developer“)
-  - [ ] ein bis zwei Sätze, wer du bist und was du suchst (Ausbildung, Festanstellung, Werkstudentenstelle …)
+  - [ ] deine Rolle in einer Zeile, mit derselben Bezeichnung wie im Seitentitel („Apprentice Software Developer“)
+  - [ ] ein bis zwei Sätze, wer du bist und was du suchst (z. B. Übernahme nach der Ausbildung, Festanstellung als Entwickler …)
   - [ ] zwei Handlungslinks: „View projects“ (zur Projektübersicht) und „Contact me“ (zur Kontaktseite)
   - Diese beiden sind Links und keine Buttons, weil sie zu einer anderen Seite führen. Merke dir die Faustregel: **Links führen woanders hin, Buttons lösen eine Aktion aus.**
 - [ ] **Featured Projects**
@@ -284,6 +285,7 @@ Mach diesen Schritt erst, wenn 1.1, 1.2 und die CSS-Grundlage (2.1 bis 2.4) fert
   - [ ] **Projekttitel als h2.** Der Titel ist der Link zur Projektseite.
   - [ ] **Kurzbeschreibung** in ein bis zwei Sätzen
   - [ ] **Technologie-Tags** als Liste
+  - [ ] **Status** („In progress“ oder „Completed“), als Text
   - [ ] Die Karte enthält **nur einen einzigen Link**, nämlich den Titel. Dass später die ganze Karte anklickbar ist, löst du mit CSS (2.4). Mehrere Links auf dasselbe Ziel würden Screenreader und Tastaturnutzer doppelt durchlaufen.
   - [ ] Jede Karte trägt eine maschinenlesbare Information darüber, welche Technologien sie enthält. Diese braucht der Filter in 3.4.
 - [ ] **Leerer Zustand:** ein Hinweis „More projects coming soon“, solange es nur wenige Projekte gibt.
@@ -308,9 +310,15 @@ Mach diesen Schritt erst, wenn 1.1, 1.2 und die CSS-Grundlage (2.1 bis 2.4) fert
 
 **Ziel:** Eine Vorlage, mit der jedes Projekt wie eine kleine Fallstudie erzählt wird: Problem → Vorgehen → Ergebnis → Gelerntes. Arbeitgeber wollen sehen, **wie du denkst**, nicht nur das fertige Ergebnis.
 
+Die Vorlage muss für **alle Arten** von Projekten funktionieren (Websites, Python-Programme, Apps …) und für zwei Zustände:
+- **In Arbeit:** Der Weg wird laufend im „Development log“ dokumentiert.
+- **Abgeschlossen:** Funktionen, Begründungen, Demo und „Try it yourself“ kommen dazu.
+
+Abschnitte, die mit *(optional)* markiert sind, lässt du weg, wenn sie für ein Projekt nicht passen. Die Überschriften-Hierarchie muss danach trotzdem lückenlos sein.
+
 > **Erstes Projekt: dieses Portfolio** (`projects/portfolio.html`).
 > Wenn die Vorlage fertig ist, kopierst du sie nach `portfolio.html` und füllst sie mit der Geschichte dieser Website.
-> - [ ] **Ab sofort ein Projekt-Tagebuch führen** (z. B. `docs/projekt-tagebuch.md`): Entscheidungen, Probleme und Lösungen, jeweils mit Datum. Daraus schreibst du später „Approach“ und „Challenges & Learnings“. Im Nachhinein erinnert man sich an die Hälfte nicht mehr.
+> - [x] **Ab sofort ein Projekt-Tagebuch führen** (z. B. `docs/projekt-tagebuch.md`): Entscheidungen, Probleme und Lösungen, jeweils mit Datum. Daraus schreibst du später „Approach“ und „Challenges & Learnings“. Im Nachhinein erinnert man sich an die Hälfte nicht mehr.
 > - [ ] **Demo-Idee auswählen.** Die Demo sollte zeigen, was dieses Projekt besonders macht: die Barrierefreiheit. Vorschläge:
 >   - *Kontrast-Labor:* Text- und Hintergrundfarbe wählen, und das Kontrastverhältnis mit AA/AAA-Bewertung wird live angezeigt.
 >   - *Schichten-Ansicht:* Dieselbe Komponente nur mit HTML, mit CSS und mit JavaScript, umschaltbar, um Progressive Enhancement zu zeigen.
@@ -324,17 +332,29 @@ Mach diesen Schritt erst, wenn 1.1, 1.2 und die CSS-Grundlage (2.1 bis 2.4) fert
 - [ ] **Projektkopf**
   - [ ] h1 mit dem Projektnamen
   - [ ] Kurzbeschreibung in einem Satz
-  - [ ] Metadaten: Zeitraum, deine Rolle, Technologien. Das ist eine Liste von Begriff–Wert-Paaren, und HTML hat dafür ein eigenes Listen-Element.
+  - [ ] Metadaten: **Status**, Zeitraum, deine Rolle, Technologien. Das ist eine Liste von Begriff–Wert-Paaren, und HTML hat dafür ein eigenes Listen-Element.
+  - [ ] **Status** ist „In progress“ oder „Completed“ und hat das Datum der letzten Aktualisierung. Ein unfertiges Projekt ohne Kennzeichnung wirkt wie ein abgebrochenes.
+  - [ ] Der Status ist als Text erkennbar und nicht nur über eine Farbe oder ein Symbol.
   - [ ] Zeitangaben sind maschinenlesbar ausgezeichnet.
-  - [ ] Links „Live demo“ und „Source code“. Wenn ein Link die Seite verlässt, wird das im Linktext angekündigt.
+  - [ ] Link „Source code“ zum öffentlichen Repository und, falls vorhanden, „Live version“. Wenn ein Link die Seite verlässt, wird das im Linktext angekündigt.
 - [ ] **Overview** (h2): Worum geht es und für wen ist es gedacht?
 - [ ] **The Problem** (h2): Welches Problem löst das Projekt?
-- [ ] **Approach** (h2): Wie bist du vorgegangen? Jeder wichtige Schritt oder jede Entscheidung bekommt eine h3.
-- [ ] **Interactive Demo** (h2)
+- [ ] **Approach** (h2): Wie bist du vorgegangen, und **warum ist es so geworden, wie es ist**? Jeder wichtige Schritt oder jede Entscheidung bekommt eine h3. Nenne auch verworfene Alternativen und den Grund dafür.
+- [ ] **Development log** (h2, *optional, solange das Projekt läuft*)
+  - [ ] datierte Einträge, die neuesten oben
+  - [ ] Jeder Eintrag ist kurz: was gemacht wurde, welches Problem auftrat, wie es gelöst wurde.
+  - [ ] Jeder Eintrag hat eine h3 mit Datum und Thema, damit man mit dem Screenreader von Eintrag zu Eintrag springen kann.
+  - [ ] Nach Abschluss bleibt das Log erhalten, steht aber weiter unten auf der Seite oder ist zugeklappt.
+- [ ] **Features** (h2, *sobald das Projekt fertig ist*): Was kann das Programm? Am besten als Liste, jeder Punkt mit einem Satz zum Nutzen.
+- [ ] **Demo** (h2, *optional*)
+  - [ ] Die Form der Demo wählst du pro Projekt aus der Übersicht „Demo-Formen“ unten.
   - [ ] ein Absatz, was die Demo zeigt
-  - [ ] eine Bedienungsanleitung (welche Tasten oder Steuerelemente)
-  - [ ] ein leerer Container, in den JavaScript später die Demo lädt
-  - [ ] eine **Textalternative**, die beschreibt, was man in der Demo erleben würde. Sie ist immer sichtbar oder zumindest ohne JavaScript sichtbar.
+  - [ ] Jede Demo hat eine **Textalternative**, die beschreibt, was man sehen oder erleben würde. Sie ist immer verfügbar, auch ohne JavaScript und ohne Video.
+  - [ ] Es gelten die Anforderungen der jeweiligen Form (siehe unten).
+- [ ] **Try it yourself** (h2, *sobald das Projekt fertig ist*)
+  - [ ] Link zum öffentlichen Repository
+  - [ ] in zwei, drei Sätzen: was man braucht (Betriebssystem, Python-Version …) und wo die Anleitung steht
+  - [ ] Die ausführliche Installationsanleitung steht in der README des Projekts, nicht auf der Website. So musst du sie nur an einer Stelle pflegen.
 - [ ] **Challenges & Learnings** (h2): Was war schwierig, und was hast du gelernt? Arbeitgeber lesen diesen Teil besonders gern.
 - [ ] **Screenshots** (h2)
   - [ ] Jedes Bild steht in einem Element mit Bildunterschrift.
@@ -342,8 +362,46 @@ Mach diesen Schritt erst, wenn 1.1, 1.2 und die CSS-Grundlage (2.1 bis 2.4) fert
 - [ ] **Projekt-Navigation** am Ende: vorheriges Projekt, nächstes Projekt und zurück zur Übersicht.
   Die Linktexte nennen den Namen des Ziel-Projekts, nicht nur „Weiter“.
 
+**Pro Projekt außerhalb der Website**
+- [ ] Das Repository ist **öffentlich**. Ausnahme: Es enthält Zugangsdaten, Kundendaten oder Code aus dem Ausbildungsbetrieb.
+- [ ] Das Repository hat eine README mit Beschreibung, Installation, Nutzung und einem Link zurück zur Projektseite.
+- [ ] Das Repository hat eine Lizenz, damit klar ist, was andere mit dem Code dürfen.
+- [ ] Im Repository liegen keine Geheimnisse (Passwörter, API-Schlüssel).
+
+**Demo-Formen im Überblick**
+
+Wähle pro Projekt die Form, die zeigt, was das Projekt besonders macht. Eine gute Demo ist kurz.
+
+| Form | Gut für | Stärken | Schwächen |
+|---|---|---|---|
+| **Bild-Rundgang** (Schritt für Schritt: Screenshot + Text) | Desktop-Apps, Apps mit Oberfläche | sehr barrierefrei, Besucher bestimmt das Tempo, wenig Aufwand, leicht zu aktualisieren | nicht bewegt, Abläufe nur in Schritten |
+| **Video** (Bildschirmaufnahme) | Abläufe, Animationen, Bedienung | zeigt das echte Programm in Aktion | aufwendig barrierefrei zu machen, große Dateien, schnell veraltet |
+| **Kommentiertes Terminal-Protokoll** (Eingaben und Ausgaben als Text) | Konsolenprogramme | echter, kopierbarer Text, für Screenreader ideal, winzig | nur für Programme ohne Oberfläche |
+| **Code-Rundgang** (ausgewählte Code-Stellen mit Erklärung) | jedes Projekt, vor allem knifflige Logik | zeigt direkt, wie du denkst und programmierst, Prüfer lieben das | zeigt nicht das Ergebnis, eher eine Ergänzung |
+| **Interaktive Nachbildung in JavaScript** | Websites oder Kernideen, die sich nachbauen lassen | Besucher probiert selbst aus | doppelter Aufwand, ist nicht das echte Programm |
+| **Python im Browser** (über WebAssembly) | reine Python-Logik ohne Fenster | echter Python-Code läuft auf der Seite | großer Download, kein GUI, eingeschränkt |
+| **Live-Version** (separat gehostet) | Web-Apps | echte Nutzung | braucht eigenes Hosting, muss gewartet werden |
+
+**Nicht verwenden: animierte GIFs.** Sie lassen sich nicht anhalten, haben keine Untertitel, sind groß und können flackern.
+
+**Anforderungen je nach Form:**
+- [ ] **Bild-Rundgang:** Jeder Schritt ist eine Abbildung mit Bildunterschrift und Alternativtext. Die Schritte sind eine geordnete Liste. Wenn es eine Blätterfunktion gibt, ist sie per Tastatur bedienbar, und ohne JavaScript sind alle Schritte untereinander sichtbar.
+- [ ] **Video:**
+  - [ ] Untertitel als eigene Datei. Ein Untertitel-Track enthält auch wichtige Geräusche.
+  - [ ] ein vollständiges **Transkript** als Text unter dem Video. Es beschreibt auch, was man *sieht*, nicht nur, was gesagt wird.
+  - [ ] Ein Video ohne Ton braucht trotzdem eine Beschreibung des Gezeigten.
+  - [ ] kein automatisches Abspielen, Steuerelemente sichtbar
+  - [ ] **selbst gehostet**, kein YouTube- oder Vimeo-Embed (Datenschutz, wie bei den Schriften)
+  - [ ] Vorschaubild, damit vor dem Abspielen kein schwarzes Rechteck erscheint
+  - [ ] komprimiert und kurz (unter 2 Minuten)
+  - [ ] Hinweis auf die Dateigröße, damit niemand ungewollt mobile Daten verbraucht
+- [ ] **Terminal-Protokoll:** Eingaben und Ausgaben sind als Code ausgezeichnet und optisch unterscheidbar (nicht nur über Farbe). Erklärungen stehen als normaler Text dazwischen.
+- [ ] **Code-Rundgang:** Code-Ausschnitte sind kurz, als Code ausgezeichnet und horizontal scrollbar, ohne dass die Seite bricht. Jeder Ausschnitt hat einen Link zur Stelle im Repository.
+- [ ] **Interaktiv (JavaScript, Python im Browser):** Es gelten alle Anforderungen aus 3.5.
+
 **Fertig, wenn …**
 - [ ] Die Seite ergibt ohne CSS und ohne JavaScript vollständig Sinn, auch der Demo-Abschnitt.
+- [ ] Die Vorlage funktioniert für ein laufendes und für ein abgeschlossenes Projekt: Nach dem Weglassen optionaler Abschnitte bleibt die Überschriften-Hierarchie lückenlos.
 - [ ] Ein Screenreader liest die Breadcrumb als „Navigation, Breadcrumb, Liste, 3 Einträge“ (sinngemäß).
 
 <details>
@@ -351,7 +409,10 @@ Mach diesen Schritt erst, wenn 1.1, 1.2 und die CSS-Grundlage (2.1 bis 2.4) fert
 
 - MDN: „`<ol>`“, „`<dl>`, `<dt>`, `<dd>`“, „`<time>`“, „`<figure>` und `<figcaption>`“
 - MDN: „`<noscript>`“, „aria-hidden“
+- MDN: „`<video>`“, „`<track>`“, „WebVTT“, „poster“, „preload“
+- MDN: „`<pre>` und `<code>`“, „`<kbd>` und `<samp>`“, „`<details>` und `<summary>`“
 - Begriffe: „Breadcrumb Pattern WAI-ARIA APG“, „Case Study Portfolio Aufbau“
+- Begriffe: „WCAG 1.2.2 Captions“, „WCAG 1.2.3 Audio Description or Media Alternative“, „Choose a license“ (choosealicense.com)
 
 </details>
 
@@ -365,7 +426,7 @@ Mach diesen Schritt erst, wenn 1.1, 1.2 und die CSS-Grundlage (2.1 bis 2.4) fert
   - [ ] h1 „About me“
   - [ ] Profilfoto. Der Alternativtext ist dein Name, weil das Foto dich zeigt und dein Aussehen keine Information für die Seite ist.
   - [ ] kurze Einleitung in zwei bis drei Sätzen
-- [ ] **Background** (h2): dein Werdegang als Fließtext, also wie du zur Webentwicklung gekommen bist.
+- [ ] **Background** (h2): dein Werdegang als Fließtext, also wie du zur Softwareentwicklung gekommen bist.
 - [ ] **Experience & Education** (h2)
   - [ ] chronologische Liste, die neuesten Einträge oben
   - [ ] jeder Eintrag mit Zeitraum, Station (Firma oder Schule) und kurzer Beschreibung
@@ -376,6 +437,7 @@ Mach diesen Schritt erst, wenn 1.1, 1.2 und die CSS-Grundlage (2.1 bis 2.4) fert
 - [ ] **CV** (h2)
   - [ ] je ein Download-Link für die englische und die deutsche Version
   - [ ] Der Linktext nennt Sprache, Dateiformat und Größe, z. B. „CV (English, PDF, 120 KB)“, damit niemand unerwartet eine Datei herunterlädt.
+  - [ ] **Datenschutz:** Der öffentliche Lebenslauf enthält **keine** Anschrift, Telefonnummer und kein Geburtsdatum. Diese Angaben stehen nur in dem Lebenslauf, den du mit einer Bewerbung direkt verschickst.
 
 **Fertig, wenn …**
 - [ ] Der Validator zeigt keine Fehler, und die Hierarchie ist lückenlos.
@@ -442,6 +504,7 @@ Mach diesen Schritt erst, wenn 1.1, 1.2 und die CSS-Grundlage (2.1 bis 2.4) fert
 **Ziel:** Die Seite ist in Deutschland rechtssicher.
 
 - [ ] Inhalte mit einem seriösen Generator erstellen (z. B. von e-recht24 oder Dr. Schwenke) und an deinen Hoster anpassen.
+- [ ] Klären, welche Anschrift im Impressum steht: deine Wohnanschrift oder eine ladungsfähige Ersatzadresse (Impressum-Service). Das Impressum verlangt deinen vollen Namen und eine Anschrift. Das ist der eigentliche Datenschutz-Knackpunkt der Website.
 - [ ] Den generierten Inhalt in **deine** Struktur übertragen: h1, Abschnitte mit h2, Listen und Absätze. Generatoren liefern oft unsauberes HTML, kopier es nicht 1:1.
 - [ ] Beide Seiten auch auf Englisch anbieten. Die deutsche Fassung ist rechtlich maßgeblich, das kannst du auf der englischen Seite vermerken.
 - [ ] Die Datenschutzerklärung nennt **Netlify** als Hoster (mit Sitz in den USA, Server-Logs) und erklärt, was mit den Daten aus dem **Kontaktformular** passiert.
@@ -840,7 +903,9 @@ Für jede Funktion gilt: Ohne JavaScript ist die Seite trotzdem vollständig nut
 
 **Ziel:** Projekte lassen sich direkt auf der Seite ausprobieren, für alle Nutzer.
 
-Die genaue Umsetzung hängt vom jeweiligen Projekt ab. Diese Anforderungen gelten aber für **jede** Demo:
+Dieser Abschnitt gilt nur für Projekte, deren Demo interaktiv ist (siehe „Demo-Formen“ in 1.5). Bild-Rundgang, Video, Terminal-Protokoll und Code-Rundgang brauchen kein eigenes Skript.
+
+Die genaue Umsetzung hängt vom jeweiligen Projekt ab. Diese Anforderungen gelten aber für **jede** interaktive Demo:
 
 - [ ] **Tastatur**: Alles ist ohne Maus bedienbar, und die Reihenfolge ist logisch.
 - [ ] **Beschriftung**: Jedes Steuerelement hat eine sichtbare Beschriftung, die auch der Screenreader vorliest.
@@ -862,7 +927,7 @@ Die genaue Umsetzung hängt vom jeweiligen Projekt ab. Diese Anforderungen gelte
 
 ---
 
-### 3.6 Kontaktformular (`contact-form.js`, neue Datei)
+### 3.6 Kontaktformular (`contact-form.js`)
 
 **Ziel:** Fehler im Formular werden früh, verständlich und für alle wahrnehmbar gemeldet.
 
@@ -933,6 +998,20 @@ Mach diesen Schritt früh, am besten gleich nach 1.2. Dann siehst du jeden Forts
 - Begriffe: „A record“, „CNAME“, „apex domain vs. www“
 
 </details>
+
+---
+
+## Später anpassen
+
+Hier stehen Änderungen, die erst zu einem bestimmten Zeitpunkt fällig werden. Notizen dieser Art gehören nicht als Kommentar in den HTML-Code, denn jeder Besucher kann den Quelltext lesen.
+
+Jeder Text steht an mehreren Stellen. Finde alle mit „Find in Files“ (Strg + Umschalt + F) und ändere sie in **beiden Sprachen**.
+
+- [ ] **Nach der Ausbildung:** Aus „Apprentice Software Developer“ wird „Software Developer“, aus „Angehender Fachinformatiker für Anwendungsentwicklung“ wird „Fachinformatiker für Anwendungsentwicklung“.
+  Betrifft: Seitentitel, Meta-Description, Open-Graph-Texte, Rolle im Hero (1.2), About-Seite (1.6) und die Lebensläufe.
+- [ ] **Neue Sprache oder neues Fachgebiet gelernt:** Die Aufzählung „web development and Python“ in der Meta-Description und in den Open-Graph-Texten ergänzen. Außerdem die Skills auf der Startseite (1.2) und der About-Seite (1.6).
+  Die Description bleibt dabei unter etwa 160 Zeichen. Wenn die Aufzählung zu lang wird, fasse sie allgemeiner.
+- [ ] **Erste Demos sind online:** Prüfen, ob die Meta-Description die Demos erwähnen soll. Vorher nicht, denn die Beschreibung verspricht nur, was es wirklich gibt.
 
 ---
 
